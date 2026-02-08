@@ -1,0 +1,304 @@
+# 📁 WEBSITE 1 FILE (HTML + CSS + JS) Sesuai permintaan, seluruh **HTML, CSS,
+dan JavaScript disatukan dalam satu file**. Tinggal simpan sebagai
+**index.html**, edit konten, lalu ZIP. --- ```html
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raihan Abdul Muiz – Personal Branding</title>
+
+    <!-- ================= CSS ================= -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #0e0e0e;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      /* NAVBAR */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: rgba(14, 14, 14, 0.8);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+
+      nav a {
+        margin-left: 24px;
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      nav a:hover {
+        color: #fff;
+      }
+      /* HERO */
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 120px 8% 80px;
+        gap: 40px;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+
+      .hero-text p {
+        margin: 20px 0;
+        color: #bbb;
+        max-width: 480px;
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 16px;
+        margin-top: 30px;
+      }
+
+      .btn-primary {
+        padding: 14px 30px;
+        background: #fff;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        border-radius: 10px;
+      }
+
+      .btn-secondary {
+        padding: 14px 30px;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+      }
+
+      .btn-primary:hover,
+      .btn-secondary:hover {
+        transform: translateY(-2px);
+      }
+
+      .hero-img {
+        display: flex;
+        justify-content: center;
+      }
+
+      .hero-img img {
+        width: 100%;
+        max-width: 420px;
+        border-radius: 24px;
+        filter: grayscale(20%);
+      }
+
+      /* SECTION */
+      section {
+        padding: 80px 8%;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      /* SKILLS */
+      .scroll-x {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .scroll-x::-webkit-scrollbar {
+        height: 6px;
+      }
+      .scroll-x::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+      }
+
+      .skill-card {
+        min-width: 220px;
+        background: #1a1a1a;
+        padding: 40px 20px;
+        border-radius: 18px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .skill-card:hover {
+        background: #fff;
+        color: #000;
+      }
+
+      /* WORK */
+      .work-card {
+        min-width: 340px;
+        height: 220px;
+        border-radius: 18px;
+        overflow: hidden;
+      }
+
+      .work-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s;
+      }
+
+      .work-card:hover img {
+        transform: scale(1.1);
+      }
+
+      /* FOOTER */
+      footer {
+        text-align: center;
+        padding: 40px;
+        color: #aaa;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .hero-text {
+          text-align: center;
+        }
+        .btn-group {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+      /* BACKGROUND VIDEO */
+      .video-bg {
+        position: fixed;
+        inset: 0;
+        z-index: -3;
+        overflow: hidden;
+      }
+
+      .video-bg video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(40%) contrast(110%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- BACKGROUND VIDEO -->
+    <div class="video-bg">
+      <video autoplay muted loop playsinline>
+        <source src="vidio2.mp4.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <header>
+      <div class="logo-img">Raihan.</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Raihanabdulmuiz<br />Photographer & editing Vidio</h1>
+        <p>
+          <b>
+            Raihan Abdul Muiz, fotografer muda yang fokus pada visual estetik,
+            storytelling, dan konten Creative Editor.</b
+          >
+        </p>
+
+        <div class="btn-group">
+          <button class="btn-primary">Start Going</button>
+          <a
+            href="Hitam dan Emas Modern Profesional Lulusan Baru CV Resume Riwayat Hidup.pdf"
+            class="btn-secondary"
+            download
+            >Download CV</a
+          >
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img
+          src="WhatsApp Image 2026-02-05 at 16.05.26.jpeg"
+          alt="Raihan Abdul Muiz"
+        />
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="scroll-x">
+        <div class="skill-card">Photography</div>
+        <div class="skill-card">Photo Editing</div>
+        <div class="skill-card">Videography</div>
+        <div class="skill-card">Color Grading</div>
+        <div class="skill-card">Creative Concept</div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <h2>Selected Work</h2>
+      <div class="scroll-x">
+        <div class="work-card">
+          <img src="WhatsApp Image 2026-02-08 at 15.02.01.jpeg" />
+        </div>
+        <div class="work-card">
+          <img src="WhatsApp Image 2026-02-08 at 16.03.20 (1).jpeg" />
+        </div>
+        <div class="work-card">
+          <img src="WhatsApp Image 2026-02-08 at 16.03.20.jpeg" />
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <p>📧 raihanabdulmuiz@gmail.com | 📞 082115084788</p>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+      // Horizontal scroll with mouse wheel
+      document.querySelectorAll(".scroll-x").forEach((el) => {
+        el.addEventListener("wheel", (e) => {
+          e.preventDefault();
+          el.scrollLeft += e.deltaY;
+        });
+      });
+    </script>
+  </body>
+</html>
